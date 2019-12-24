@@ -1,0 +1,28 @@
+mongo-url="mongodb://localhost:27017"
+# connect to the Elasticsearch REST API at the following node URLs
+elasticsearch-urls = ["http://localhost:9200"]
+verbose=true
+
+[[mapping]]
+namespace= "varann.clinvar"
+index= "clinvar"
+
+[[mapping]]
+namespace= "varann.dbsnp"
+index= "dbsnp"
+
+[[mapping]]
+namespace = "varann.exac"
+index = "exac"
+
+[[mapping]]
+namespace = "varann.effect"
+index = "effect"
+
+[[mapping]]
+namespace = "varann.g1k"
+index = "g1k"
+
+[[mapping]]
+namespace = "varann.dbnsfp"
+index = "dbnsfp"
