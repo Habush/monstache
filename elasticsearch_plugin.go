@@ -16,8 +16,8 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 			}
 		}
 		break
-	case "dbsnp":
-		fields := []string{"chrom", "pos", "id", "ref", "alt", "rsId", "rsPos", "genes", "origin", "hgvs"}
+	case "genes":
+		fields := []string{"chrom", "id" ,"start", "end", "symbol", "entrezID"}
 
 		for key, _ := range doc {
 			if !contains(fields, key) {

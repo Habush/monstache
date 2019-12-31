@@ -7,9 +7,6 @@ verbose=true
 namespace= "varann.clinvar"
 index= "clinvar"
 
-[[mapping]]
-namespace= "varann.dbsnp"
-index= "dbsnp"
 
 [[mapping]]
 namespace = "varann.exac"
@@ -26,3 +23,7 @@ index = "g1k"
 [[mapping]]
 namespace = "varann.dbnsfp"
 index = "dbnsfp"
+
+[[mapping]]
+namespace = "varann.genes"
+index = "genes"
