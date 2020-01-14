@@ -17,7 +17,7 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 		}
 		break
 	case "genes":
-		fields := []string{"chrom", "id" ,"start", "end", "symbol", "entrezID"}
+		fields := []string{"chrom", "id", "start", "end", "symbol", "entrezID"}
 
 		for key, _ := range doc {
 			if !contains(fields, key) {
@@ -61,6 +61,15 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 				delete(doc, key)
 			}
 		}
+		break;
+	case "acmg":
+		fields := []string{"chrom", "pos", "ref", "alt", "hgvs"}
+		for key, _ := range doc {
+			if !contains(fields, key) {
+				delete(doc, key)
+			}
+		}
+		break;
 	}
 
 	output = &monstachemap.MapperPluginOutput{Document: doc}
