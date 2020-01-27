@@ -31,3 +31,7 @@ index = "genes"
 [[mapping]]
 namespace = "varann.acmg"
 index = "acmg"
+
+[[mapping]]
+namespace = "varann.gnomad_exome"
+index = "gnomad_exome"

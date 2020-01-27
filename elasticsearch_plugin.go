@@ -70,6 +70,16 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 			}
 		}
 		break;
+
+	case "gnomad_exome":
+		fields := []string{"chrom", "pos", "ref", "alt", "hgvs"}
+		for key, _ := range doc {
+			if !contains(fields, key) {
+				delete(doc, key)
+			}
+		}
+
+		break;
 	}
 
 	output = &monstachemap.MapperPluginOutput{Document: doc}
