@@ -13,8 +13,8 @@ namespace = "varann.exac"
 index = "exac"
 
 [[mapping]]
-namespace = "varann.effect"
-index = "effect"
+namespace = "varann.variant"
+index = "variant"
 
 [[mapping]]
 namespace = "varann.g1k"
@@ -29,9 +29,9 @@ namespace = "varann.genes"
 index = "genes"
 
 [[mapping]]
-namespace = "varann.acmg"
-index = "acmg"
-
-[[mapping]]
 namespace = "varann.gnomad_exome"
 index = "gnomad_exome"
+
+[[mapping]]
+namespace = "varann.transcript"
+index = "transcript"
