@@ -16,15 +16,6 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 			}
 		}
 		break
-	case "genes":
-		fields := []string{"chrom", "id", "start", "end", "symbol", "entrezID"}
-
-		for key, _ := range doc {
-			if !contains(fields, key) {
-				delete(doc, key)
-			}
-		}
-		break;
 
 	case "exac":
 		fields := []string{"chrom", "pos", "ref", "alt", "hgvs"}
@@ -37,7 +28,7 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 		break;
 
 	case "variant":
-		fields := []string{"chrom", "pos", "ref", "alt", "hgvs", "rsId", "gene"}
+		fields := []string{"chrom", "pos", "ref", "alt", "hgvs", "rsId", "gene", "geneId"}
 		for key, _ := range doc {
 			if !contains(fields, key) {
 				delete(doc, key)
@@ -54,8 +45,8 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 		}
 
 		break;
-	case "dbnsfp":
-		fields := []string{"chrom", "pos", "ref", "alt", "hgvs"}
+	case "intervar":
+		fields := []string{"chrom", "pos", "ref", "alt", "hgvs", "gene", "geneId"}
 		for key, _ := range doc {
 			if !contains(fields, key) {
 				delete(doc, key)

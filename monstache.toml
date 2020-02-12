@@ -17,16 +17,12 @@ namespace = "varann.variant"
 index = "variant"
 
 [[mapping]]
+namespace = "varann.intervar"
+index = "intervar"
+
+[[mapping]]
 namespace = "varann.g1k"
 index = "g1k"
-
-[[mapping]]
-namespace = "varann.dbnsfp"
-index = "dbnsfp"
-
-[[mapping]]
-namespace = "varann.genes"
-index = "genes"
 
 [[mapping]]
 namespace = "varann.gnomad_exome"
